@@ -11,15 +11,12 @@ namespace LinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("Implementaion of Linked List");
-            LinkedList<int> linkedList = new LinkedList<int>();
-           
-            linkedList.AddLast(56);
-            linkedList.AddLast(30);
-            linkedList.AddLast(70);
-            foreach (int i in linkedList)
-            {
-                Console.WriteLine(i);
-            }
+            //creating object for collection class linked list 
+            MyLinkedList<int> linkedList = new MyLinkedList<int>();
+            linkedList.AddFirst(70);
+            linkedList.AddFirst(30);
+            linkedList.AddFirst(56);
+            linkedList.DisplayList();
             Console.Read();
         }
     }
