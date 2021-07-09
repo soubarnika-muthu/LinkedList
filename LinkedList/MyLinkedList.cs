@@ -38,9 +38,29 @@ namespace LinkedList
                     head = newNode;
                 }
             }
+        public void AddLast(T value)
+        {
+            //creating the new node with given value
+            Node<T> newNode = new Node<T>(value);
+            //check whether the head is null or not . 
+            if (head == null)
+            {
+                head = newNode;
+            }
+            //iterate till the last element and make next feild of last element as newNode
+            else
+            {
+                Node<T> temp = head;
+                while (temp.Next != null)
+                {
+                    temp = temp.Next;
+                }
+                temp.Next = newNode;
+            }
+        }
 
-            //method to display the element 
-            public void DisplayList()
+        //method to display the element 
+        public void DisplayList()
             {
                 Node<T> temp = head;
                 //if head is null then no element is present
