@@ -91,7 +91,18 @@ namespace LinkedList
                 }
             }
         }
-
+        public void DeleteFirst()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("No element in the list");
+            }
+            //make the next node as head
+            else
+            {
+                head = head.Next;
+            }
+        }
 
         //method to display the element 
         public void DisplayList()
