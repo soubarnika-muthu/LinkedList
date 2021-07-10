@@ -182,6 +182,19 @@ namespace LinkedList
                 return count;
             }
         }
+        public void sort()
+        {
+            int count = SizeOf();
+            Node<T> minNode = head;
+            for (int i = 0; i < count; i++)
+            {
+
+                for (int j = i; j < count; j++)
+                {
+
+                }
+            }
+        }
         //method to display the element 
         public void DisplayList()
             {

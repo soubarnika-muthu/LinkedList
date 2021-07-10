@@ -61,5 +61,16 @@ namespace LinkedListTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void SortTest()
+        {
+            SortedLinkedList<int> list = new SortedLinkedList<int>();
+            list.CreateSortList(70);
+            list.CreateSortList(30);
+            list.CreateSortList(58);
+            list.CreateSortList(80);
+            list.CreateSortList(68);
+            list.DisplayList();
+        }
     }
 }
