@@ -120,9 +120,22 @@ namespace LinkedList
                 temp.Next = null;
             }
         }
+       
+        public int Search(T data)
+        {
+            while (this.head != null)
+            {
+                if (this.head.value.Equals(data))
+                {
+                    return 1;
+                }
+                this.head = this.head.Next;
+            }
+            return 0;
+        }  
 
-        //method to display the element 
-        public void DisplayList()
+                //method to display the element 
+           public void DisplayList()
             {
                 Node<T> temp = head;
                 //if head is null then no element is present
