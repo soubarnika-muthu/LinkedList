@@ -17,7 +17,7 @@ namespace LinkedList
                 this.Next = null;
             }
         }
-        class MyLinkedList<T>
+      public  class MyLinkedList<T>
         {
             private Node<T> head;
 
