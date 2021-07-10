@@ -22,7 +22,7 @@ namespace LinkedList
               linkedList1.AddLast(56);
               linkedList1.AddLast(30);
               linkedList1.AddLast(70);*/
-            //Insertion at between
+            //Insertion at between element 
             Console.WriteLine("Insertion at Between Elements");
             linkedList.AddLast(56);
             linkedList.InsertToNext(30,56);
