@@ -120,7 +120,37 @@ namespace LinkedList
                 temp.Next = null;
             }
         }
-       
+
+        public void DeleteNode(T value)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("No element to delete");
+            }
+            else if (head.value.Equals(value))
+            {
+                head = head.Next;
+            }
+            //iterate till the last element or till the node is found
+            else
+            {
+                //initialize two local variable to hold the node address
+                Node<T> prev = head;
+                Node<T> temp = head;
+
+                while (temp != null && !(temp.value.Equals(value)))
+                {
+                    prev = temp;
+                    temp = temp.Next;
+                }
+                if (temp.value.Equals(value))
+                {
+                    prev.Next = temp.Next;
+                    temp.Next = null;
+                }
+
+            }
+        }
         public int Search(T data)
         {
             while (this.head != null)
@@ -132,10 +162,28 @@ namespace LinkedList
                 this.head = this.head.Next;
             }
             return 0;
-        }  
-
-                //method to display the element 
-           public void DisplayList()
+        }
+        //Method to find size of linked list
+        public int SizeOf()
+        {
+            if (head == null)
+            {
+                return 0;
+            }
+            else
+            {
+                Node<T> temp = head;
+                int count = 0;
+                while (temp != null)
+                {
+                    count++;
+                    temp = temp.Next;
+                }
+                return count;
+            }
+        }
+        //method to display the element 
+        public void DisplayList()
             {
                 Node<T> temp = head;
                 //if head is null then no element is present

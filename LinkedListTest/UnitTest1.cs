@@ -46,5 +46,20 @@ namespace LinkedListTest
             linkedList.DisplayList();
 
         }
+        [TestMethod]
+        public void SizeTest()
+        {
+            //Assign
+            linkedList.AddFirst(70);
+            linkedList.AddFirst(30);
+            linkedList.AddFirst(56);
+            linkedList.InsertToNext(45, 30);
+            linkedList.DeleteNode(45);
+            //act
+            int actual = linkedList.SizeOf();
+            int expected = 3;
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

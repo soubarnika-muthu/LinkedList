@@ -17,6 +17,7 @@ namespace LinkedList
         /// UC6- Ability to delete last node
         /// UC7- Ability to search the Node
         ///  UC8 -Insert node using Test Cases
+        ///  UC9 -Finding size of list
         /// </summary>
         /// <param name="args">The arguments.</param>
         static void Main(string[] args)
