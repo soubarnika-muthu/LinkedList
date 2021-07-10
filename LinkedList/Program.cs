@@ -13,15 +13,21 @@ namespace LinkedList
             Console.WriteLine("Implementaion of Linked List");
             //creating object for collection class linked list 
             MyLinkedList<int> linkedList = new MyLinkedList<int>();
-            linkedList.AddFirst(70);
-            linkedList.AddFirst(30);
-            linkedList.AddFirst(56);
-            linkedList.DisplayList();
-            Console.WriteLine( "Insertion at Last:" );
-            MyLinkedList<int> linkedList1 = new MyLinkedList<int>();
-            linkedList1.AddLast(56);
-            linkedList1.AddLast(30);
-            linkedList1.AddLast(70);
+            /*  linkedList.AddFirst(70);
+              linkedList.AddFirst(30);
+              linkedList.AddFirst(56);
+              linkedList.DisplayList();
+              Console.WriteLine( "Insertion at Last:" );
+              MyLinkedList<int> linkedList1 = new MyLinkedList<int>();
+              linkedList1.AddLast(56);
+              linkedList1.AddLast(30);
+              linkedList1.AddLast(70);*/
+            //Insertion at between
+            Console.WriteLine("Insertion at Between Elements");
+            linkedList.AddLast(56);
+            linkedList.InsertToNext(30,56);
+            linkedList.InsertToNext(70, 56);
+
             linkedList.DisplayList();
             Console.Read();
         }

@@ -58,6 +58,40 @@ namespace LinkedList
                 temp.Next = newNode;
             }
         }
+        //method to insert newNode next to existing node
+        public void InsertToNext(T value, T nextValue)
+        {
+            //creating the new node with given value
+            Node<T> newNode = new Node<T>(value);
+            //check whether the head is null or not . 
+            if (head == null)
+            {
+                head = newNode;
+            }
+            //iterate till the last element or till the node is found
+            else
+            {
+                //initialize two local variable to hold the node address
+                Node<T> prev = head;
+                Node<T> temp = prev.Next;
+                while (prev.Next != null && !(prev.value.Equals(nextValue)))
+                {
+                    prev = temp;
+                    temp = temp.Next;
+                }
+                if (prev.value.Equals(nextValue))
+                {
+                    newNode.Next = prev.Next;
+                    prev.Next = newNode;
+                }
+                else
+                {
+                    Console.WriteLine("Element {0} is not found.\nElement{1} is added at last", nextValue, value);
+                    prev.Next = newNode;
+                }
+            }
+        }
+
 
         //method to display the element 
         public void DisplayList()
