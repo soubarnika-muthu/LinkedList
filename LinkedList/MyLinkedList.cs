@@ -103,6 +103,23 @@ namespace LinkedList
                 head = head.Next;
             }
         }
+        public void DeleteLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("No element in the list");
+            }
+            //make the check whether the next node of current node is null.If yes change next field of current node as null.
+            else
+            {
+                Node<T> temp = head;
+                while (temp.Next.Next != null)
+                {
+                    temp = temp.Next;
+                }
+                temp.Next = null;
+            }
+        }
 
         //method to display the element 
         public void DisplayList()

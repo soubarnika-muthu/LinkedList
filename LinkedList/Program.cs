@@ -52,13 +52,14 @@ namespace LinkedList
                         break;
                     case 4:
                         Console.WriteLine("Deleting Elements at first");
-
                         linkedList.DeleteFirst();
-                       
                         linkedList.DisplayList();
                         break;
-
-
+                    case 5:
+                        Console.WriteLine("Deleting Elements at last");
+                        linkedList.DeleteLast();
+                        linkedList.DisplayList();
+                        break;
                     default:
                         Console.WriteLine("Please enter valid choice..");
                         break;
